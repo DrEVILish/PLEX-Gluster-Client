@@ -12,8 +12,10 @@ PLEX_MEDIA_SERVER_INFO_DEVICE=docker \
 PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS="6" \
 PLEX_MEDIA_SERVER_USER=abc
 
+
 # install packages
 RUN \
+ add-apt-repository ppa:gluster/glusterfs-3.13 && \
  apt-get update && \
  apt-get install -y \
 	avahi-daemon \
@@ -39,9 +41,6 @@ RUN \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
-
-# add local files
-COPY root/ /
 
 # ports and volumes
 EXPOSE 32400 32400/udp 32469 32469/udp 5353/udp 1900/udp
