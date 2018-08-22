@@ -19,8 +19,9 @@ RUN \
 	avahi-daemon \
 	dbus \
 	unrar \
-	wget && \
 	glusterfs-client \
+	wget && \
+
 
 # install plex
  curl -o \
