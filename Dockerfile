@@ -1,4 +1,4 @@
-FROM linuxserver/docker-plex
+FROM linuxserver/plex:latest
 
 ENV DEBIAN_FRONTEND="noninteractive" \
 PLEX_DOWNLOAD="https://downloads.plex.tv/plex-media-server" \
